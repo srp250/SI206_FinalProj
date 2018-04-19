@@ -16,25 +16,24 @@ username = ""
 
 The above will require user to create an account and also to create a script-based application 
 
-# Data Source 1: Making a request to the Reddit API to access Subreddit data
-Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
+# Data Source 1: Making a Request to Reddit API to Access Subreddit Data
+- Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
 
-Create a class, Post, to store the title, subreddit name, time created, permalink, gilded value (if any), and upvote score of 10           posts within a subreddit
+- Create a class, Post, to store the title, subreddit name, time created, permalink, gilded value (if any), and upvote score of 10           posts within a subreddit
 
-Populate Subreddits and Posts database tables from reddit.db database with above data<br />
-      o	get_reddit_auth() and get_token()
-              ♣	Use CLIENT_ID and CLIENT_SECRET with requests.auth.HTTPBasicAuth
-              ♣	Request to "https://www.reddit.com/api/v1/access_token" to get access 
-              ♣	Save token response in a separate cache for credentials
-      o	make_request(subreddit)
-              ♣	“https://oauth.reddit.com/r/” + subreddit
+- Populate Subreddits and Posts database tables from reddit.db database with above data: get_reddit_auth() and get_token()
 
-•	Data Source 2: Scraping Reddit’s ‘top’ Posts Page
-      o	Retrieve top-scoring links from past 24 hours
-      o	make_request_using_cache(url)
-              ♣	If the url for the request is not already in the cache after making a request, then write it to the cache
-      o	I did not have to use authentication methods for this part but I did have to specify a User-Agent because at first the website             thought I was a bot 
-              ♣	({"User-Agent": "Final Project by /u/" + USERNAME})
+- Use CLIENT_ID and CLIENT_SECRET with requests.auth.HTTPBasicAuth
+
+- Request to "https://www.reddit.com/api/v1/access_token" to retrieve access token
+
+- Save token response in a separate cache for credentials using make_request(subreddit) for “https://oauth.reddit.com/r/” + subreddit
+
+# Data Source 2: Scraping Reddit’s ‘top’ Posts Page
+
+- Retrieve top-scoring links from past 24 hours
+- make_request_using_cache(url): If the url for the request is not already in the cache after making a request, then write it to the cache
+- Did not have to use authentication methods for this part but I did have to specify a User-Agent because at first the website thought I was a bot: ({"User-Agent": "Final Project by /u/" + USERNAME})
 
 •	Running the Program
       1.	python3 final_project.py
