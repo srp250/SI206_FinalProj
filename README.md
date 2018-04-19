@@ -48,8 +48,8 @@ The above will require user to create an account and also to create a script-bas
 # SQLite Database
 - FOREIGN KEY(Subreddit_ID) REFERENCES Subreddits(ID): Allows tables to be JOINed on Subreddits ON Subreddits.Name = Posts.Subreddit_Name 
               
-# Caching (cache.json and creds.json)
-- Two cache files, one to store the Reddit API responses and one to store credentials (i.e., access token)
+# Caching
+- Two cache files (cache.json and creds.json), one to store the Reddit API responses and one to store credentials (i.e., access token)
 - Reddit’s API allows you to retrieve a nicely json-formatted response when you make a request to it
 - CACHE_DICTION[subreddit] = response in the get_data() function makes a cache file with many attributes for each post, which made it relatively simple to make a Post class and then extract the necessary information from the json file to make instance variables
 
