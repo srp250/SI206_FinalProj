@@ -1,15 +1,17 @@
 # SI 206 Final Project -- Measuring Post Popularity on Reddit
 
-# Purpose # 
-of my project: Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
+# Purpose of Project
+Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
 
-• Accessing Data Sources
-      o	User will need to retrieve their own credentials from Reddit's app developer for the following:
-              ♣	client_id = ""
-              ♣	client_secret = ""
-              ♣	password = ""
-              ♣	username = ""
-      o	The above will require user to create an account and also to create a script-based application 
+# Accessing Data Sources
+User will need to retrieve their own credentials from Reddit's app developer for the following:
+
+client_id = ""
+client_secret = ""
+password = ""
+username = ""
+
+The above will require user to create an account and also to create a script-based application 
 
 •	Data Source 1: Making a request to the Reddit API to access Subreddit data
       o	Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
