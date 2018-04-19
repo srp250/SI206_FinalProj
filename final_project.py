@@ -185,9 +185,7 @@ def get_top_posts():
 
     upvote_score = content_div.find_all(class_ = 'score unvoted')
     post_title = content_div.find_all('p', class_ = 'title')
-
-    print(len(upvote_score))
-
+    
     count = 0
     for c in post_title:
         upvote_count = 0
@@ -251,8 +249,6 @@ def get_top_posts():
     print('Generating Bar Chart...')
     display = go.Figure(data = data, layout = layout)
     py.offline.plot(display, filename = "topposts.html")
-
-get_top_posts()
 
 def bar_chart():
     subreddit_names = []
