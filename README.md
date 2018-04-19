@@ -1,11 +1,12 @@
 # SI 206 Final Project -- Measuring Post Popularity on Reddit
 
-•	Purpose of my project: Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
+# Purpose # 
+of my project: Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
 
 • Accessing Data Sources
       o	User will need to retrieve their own credentials from Reddit's app developer for the following:
-              ♣	client_id = ""_
-              ♣	client_secret = ""_
+              ♣	client_id = ""
+              ♣	client_secret = ""
               ♣	password = ""
               ♣	username = ""
       o	The above will require user to create an account and also to create a script-based application 
@@ -58,8 +59,8 @@
               ♣	I have two cache files, one to store the Reddit API responses and one to store credentials (i.e, access token)
               ♣	Reddit’s API allows you to retrieve a really nicely json-formatted response when you make a request to it, so                             CACHE_DICTION[subreddit] = response in the get_data() function makes a cache file with many attributes for each post,                     which made it relatively simple to make a Post class and then extract the necessary information from the json file to make                 instance variables. 
 
-•	Overview of Elements/Functions:
-      o	reddit.db: Connect to database and create Subreddits and Posts Databases
+Overview of Elements/Functions:
+reddit.db: Connect to database and create Subreddits and Posts Databases
       o	checkcache(): Open cache file and read it to see if contents need to be deleted before making a request
       o	make_request_using_cache(url): Make a request to popular subreddit URLs and write the json response to CACHE_DICTION
       o	get_token(): Check creds.json (credentials cache) to see if access token is already saved, if it is, return it
