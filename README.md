@@ -7,8 +7,11 @@ Retrieve which posts gain the most traction on Reddit in general, but also speci
 User will need to retrieve their own credentials from Reddit's app developer for the following:
 
 client_id = ""
+
 client_secret = ""
+
 password = ""
+
 username = ""
 
 The above will require user to create an account and also to create a script-based application 
