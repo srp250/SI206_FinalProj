@@ -4,7 +4,7 @@
 Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
 
 # Accessing Data Sources
-User will need to retrieve their own credentials from Reddit's app developer for the following:
+Users will need to retrieve their own credentials from Reddit's app developer for the following:
 
 client_id = ""
 
@@ -14,7 +14,7 @@ password = ""
 
 username = ""
 
-The above will require user to create an account and also to create a script-based application 
+The above will require users to create a Reddit account and also to create a script-based application here: https://www.reddit.com/prefs/apps/ 
 
 # Data Source 1: Making a Request to Reddit API to Access Subreddit Data
 - Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
