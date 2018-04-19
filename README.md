@@ -1,4 +1,4 @@
-# SI 206 Final Project -- Measuring Post Popularity on Reddit
+# SI 206 Final Project: Measuring Post Popularity on Reddit
 
 # Purpose of Project
 Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
@@ -16,10 +16,12 @@ username = ""
 
 The above will require user to create an account and also to create a script-based application 
 
-•	Data Source 1: Making a request to the Reddit API to access Subreddit data
-      o	Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
-      o	Create a class, Post, to store the title, subreddit name, time created, permalink, gilded value (if any), and upvote score of 10           posts within a subreddit
-      o	Populate Subreddits and Posts database tables from reddit.db database with above data
+# Data Source 1: Making a request to the Reddit API to access Subreddit data
+Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
+
+Create a class, Post, to store the title, subreddit name, time created, permalink, gilded value (if any), and upvote score of 10           posts within a subreddit
+
+Populate Subreddits and Posts database tables from reddit.db database with above data<br />
       o	get_reddit_auth() and get_token()
               ♣	Use CLIENT_ID and CLIENT_SECRET with requests.auth.HTTPBasicAuth
               ♣	Request to "https://www.reddit.com/api/v1/access_token" to get access 
