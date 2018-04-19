@@ -1,4 +1,4 @@
-# SI 206 Final Project: Measuring Post Popularity on Reddit
+# SI 206 Final Project: Measuring & Visualizing Post Popularity on Reddit
 
 # Purpose of Project
 Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
