@@ -4,8 +4,8 @@
 
 • Accessing Data Sources
       o	User will need to retrieve their own credentials from Reddit's app developer for the following:
-              ♣	client_id = ""
-              ♣	client_secret = ""
+              ♣	client_id = ""_
+              ♣	client_secret = ""_
               ♣	password = ""
               ♣	username = ""
       o	The above will require user to create an account and also to create a script-based application 
