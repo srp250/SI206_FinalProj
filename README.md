@@ -35,22 +35,12 @@ The above will require user to create an account and also to create a script-bas
 - make_request_using_cache(url): If the url for the request is not already in the cache after making a request, then write it to the cache
 - Did not have to use authentication methods for this part but I did have to specify a User-Agent because at first the website thought I was a bot: ({"User-Agent": "Final Project by /u/" + USERNAME})
 
-•	Running the Program
-      1.	python3 final_project.py
-              ♣ Running this will generate the prompt "Fetch new or cached data? new/cached: "
-              ♣ If user has never ran the program before, will need to say "new" to populate reddits.db database and create cache
-              ♣ "cached" will call functions to retrieve information for each popular subreddit that is already stored in cache.json
-      2.	"new"
-              a.	get_reddit_auth() – generating access token to make a request
-              b.	search_populars – uses authorization to get data from popular subreddits and enters data into Subreddits and Posts
-      3.	"cached"
-              a.	check_cache() – assuming the user has already ran ‘new’ command once before and has a stored credentials cache, checks                 the cache and gets the access token it needs to carry out a reddit session and search the popular subs
-      4.	"bar chart upvotes" 
-          "bar chart gilded"
-          "scatterplot upvotes"
-          "scatterplot gilded"
-              ♣ After user has entered data into database through above commands, can type commands to display data in two different                       modes, bar chart or scatterplot, based on upvotes or whether the subreddit has posts that have been gilded (if so, how                     many of them)            
-              ♣ Connection and storage of data into the database is required for the visualization functions to work because they execute                 SQL queries that aggregate each post's upvote/gilded score and join the Subreddits and Posts tables on their foreign key                   (ID and subreddit_id), grouping the score by the name of the subreddit and ordering in descending or ascending order
+# Running the Program
+- python3 final_project.py: Running this will generate the prompt "Fetch new or cached data? new/cached: ". If user has never ran the program before, will need to say "new" to populate reddits.db database and create cache. "cached" will call functions to retrieve information for each popular subreddit that is already stored in cache.json.
+- "new": get_reddit_auth() – generates access token to make a request; search_populars() – uses authorization to get data from popular subreddits and enters data into Subreddits and Posts
+- "cached": check_cache() – assuming the user has already ran ‘new’ command once before and has a stored credentials cache, checks the cache and gets the access token it needs to carry out a reddit session and search the popular subs
+- "bar chart upvotes", "bar chart gilded", "scatterplot upvotes", "scatterplot gilded": After user has entered data into database through above commands, can type commands to display data in two different modes, bar chart or scatterplot, based on upvotes or whether the subreddit has posts that have been gilded (if so, how many of them)
+      - Connection and storage of data into the database is required for the visualization functions to work because they execute                 SQL queries that aggregate each post's upvote/gilded score and join the Subreddits and Posts tables on their foreign key                   (ID and subreddit_id), grouping the score by the name of the subreddit and ordering in descending or ascending order
               ♣ fetchall() generates a list of the aggregated upvote or gilded scores and the subreddit name associated. After unpacking                   the list, we then use Plotly to create a visual of the data collected.
       4.	"top posts"
               ♣	Retrieves top posts from the general Reddit ‘top’ links page, rather than a specific subreddit
@@ -63,7 +53,7 @@ The above will require user to create an account and also to create a script-bas
               
 •	Caching with cache.json and creds.json
               ♣	I have two cache files, one to store the Reddit API responses and one to store credentials (i.e, access token)
-              ♣	Reddit’s API allows you to retrieve a really nicely json-formatted response when you make a request to it, so                             CACHE_DICTION[subreddit] = response in the get_data() function makes a cache file with many attributes for each post,                     which made it relatively simple to make a Post class and then extract the necessary information from the json file to make                 instance variables. 
+              ♣	Reddit’s API allows you to retrieve a really nicely json-formatted response when you make a request to it, so                             CACHE_DICTION[subreddit] = response in the get_data() function makes a cache file with many attributes for each post,                     which made it relatively simple to make a Post class and then extract the necessary information from the json file to make instance variables. 
 
 Overview of Elements/Functions:
 reddit.db: Connect to database and create Subreddits and Posts Databases
