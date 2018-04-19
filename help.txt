@@ -1,0 +1,44 @@
+________________________________________________________________________________
+Available Commands:
+________________________________________________________________________________
+* new
+	Description: Fetches 10 current-day data records of
+	posts in each of the specified popula subreddits and
+	populates two database tables, Subreddits and Posts.
+	Populates database tables Subreddits and Posts.
+* cached
+	Description: Populates database in the same way as above,
+	but uses data already stored in cache.
+________________________________________________________________________________
+Once data is fetched and entered into the database, can
+generate data visualizations using the following commands:
+________________________________________________________________________________
+* top posts
+	- Description: Retrieves top posts from Reddit's 'top'
+	trending page, orders them in descending order of upvote'
+	count, and creates a bar chart to display data.
+* bar chart
+	- Description: Creates a popularity score based off
+	of each subreddit's within Posts total # of upvotes
+	or gilded posts and plots data into bar graph.
+	- Options:
+		* upvotes
+		- Description: Specifies to create bar chart based
+		off of accumulated total upvote score from Posts.
+		* gilded
+		- Description: Specifies to create bar chart based
+		off of whichever posts within Posts have been gilded.
+* scatterplot
+	- Description: Creates a popularity score based off
+	of each subreddit's within Posts total # of upvotes
+	or gilded posts and plots data into bar graph.
+	- Options:
+		* upvotes
+		- Description: Specifies to create scatterplot based
+		off of accumulated total upvote score from Posts.
+		* gilded
+		- Description: Specifies to create scatterplot based
+		off of whichever posts within Posts have been gilded.
+________________________________________________________________________________
+Example Command: bar chart upvotes
+________________________________________________________________________________
