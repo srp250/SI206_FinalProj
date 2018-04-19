@@ -49,7 +49,7 @@ class Test4(unittest.TestCase):
         page_html = make_request_using_cache(baseurl)
         page_soup = BeautifulSoup(page_html, 'html.parser')
         content_div = page_soup.find(class_ = 'content')
-        upvote_score = content_div.find_all(class_ = 'score unvoted')
+        upvote_score = content_div.find(class_ = 'score unvoted')
         self.assertNotEqual(len(upvote_score), 0)
 
 class Test5(unittest.TestCase):
