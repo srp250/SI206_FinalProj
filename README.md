@@ -17,7 +17,7 @@ username = ""
 The above will require users to create a Reddit account and also to create a script-based application here: https://www.reddit.com/prefs/apps/ 
 
 # Data Source 1: Making a Request to Reddit API to Access Subreddit Data
-- Make a request with limit 10 to get 10 records per the 45 popular subreddits that I specify in popular_subreddits
+- Make a request with limit 10 to get 10 records per the 45 popular subreddits that I got from https://www.reddit.com/r/defaults/comments/61mgs9/list_of_default_subreddits_26_march_2017/ and specify in popular_subreddits
 
 - Create a class, Post, to store the title, subreddit name, time created, permalink, gilded value (if any), and upvote score of 10           posts within a subreddit
 
