@@ -46,7 +46,9 @@ The above will require users to create a Reddit account and also to create a scr
 - "exit": Exits the program
 
 # SQLite Database
-- FOREIGN KEY(Subreddit_ID) REFERENCES Subreddits(ID): Allows tables to be JOINed on Subreddits ON Subreddits.Name = Posts.Subreddit_Name 
+- FOREIGN KEY(Subreddit_ID) REFERENCES Subreddits(ID): Allows tables to be JOINed on Subreddits ON Subreddits.Name = Posts.Subreddit_Name
+- SET Subreddit_ID = (SELECT ID FROM Subreddits WHERE Subreddits.Name = Posts.Subreddit_Name)
+
               
 # Caching
 - Two cache files (cache.json and creds.json), one to store the Reddit API responses and one to store credentials (i.e., access token)
