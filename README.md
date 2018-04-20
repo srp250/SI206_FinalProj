@@ -4,7 +4,7 @@
 Retrieve which posts gain the most traction on Reddit in general, but also specifically within Subreddits within a span of 24 hours.
 
 # Accessing Data Sources
-Users will need to retrieve their own credentials from Reddit's app developer for the following:
+Users will need to retrieve their own credentials from Reddit's app developer and create a secrets.py file with the following filled in:
 
 client_id = ""
 
