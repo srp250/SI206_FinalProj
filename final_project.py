@@ -489,6 +489,11 @@ def interactive_prompt():
 
         if response1 == "scatterplot gilded":
             scatterplot2()
+            
+        if 'top' not in response1:
+            if 'bar' not in response1:
+                if 'scatterplot' not in response1:
+                    print('Command not recognized. Please try again (or "help" for options): ')
 
         if response1 == 'exit':
             print('Bye!')
