@@ -13,10 +13,6 @@ CLIENT_SECRET = secrets.client_secret
 PASSWORD = secrets.password
 USERNAME = secrets.username
 
-redirect_uri = 'https://www.programsinformationpeople.org/runestone/oauth'
-authorization_url = 'https://ssl.reddit.com/api/v1/authorize'
-access_token_url = 'https://www.reddit.com/api/v1/access_token'
-
 CACHE_FNAME = 'cache.json'
 CACHE_CREDENTIALS = 'creds.json'
 CACHE_DICTION = {}
